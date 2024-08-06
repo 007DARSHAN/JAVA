@@ -12,7 +12,7 @@ public class rockpaperscissor
          System.out.println("Enter 0 for rock ,1 for paper ,2 for scissor ");
          int userInput=sc.nextInt();
          Random random=new Random();
-         int computerInput=random.nextInt(3);
+         int computerInput=random.nextInt(2);
          if(userInput==computerInput)
          {
             System.out.println("DRAW");
