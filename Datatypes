@@ -1,0 +1,55 @@
+import java.util.Scanner;
+
+public class DataTypesExample {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Input and print int
+        System.out.print("Enter an integer: ");
+        int intValue = scanner.nextInt();
+        System.out.println("Integer value: " + intValue);
+
+        // Input and print double
+        System.out.print("Enter a double: ");
+        double doubleValue = scanner.nextDouble();
+        System.out.println("Double value: " + doubleValue);
+
+        // Input and print char
+        System.out.print("Enter a character: ");
+        char charValue = scanner.next().charAt(0); // Read the first character of the input
+        System.out.println("Character value: " + charValue);
+
+        // Input and print boolean
+        System.out.print("Enter a boolean (true/false): ");
+        boolean booleanValue = scanner.nextBoolean();
+        System.out.println("Boolean value: " + booleanValue);
+
+        // Input and print byte
+        System.out.print("Enter a byte (as integer): ");
+        byte byteValue = scanner.nextByte();
+        System.out.println("Byte value: " + byteValue);
+
+        // Input and print short
+        System.out.print("Enter a short (as integer): ");
+        short shortValue = scanner.nextShort();
+        System.out.println("Short value: " + shortValue);
+
+        // Input and print long
+        System.out.print("Enter a long (as integer): ");
+        long longValue = scanner.nextLong();
+        System.out.println("Long value: " + longValue);
+
+        // Input and print float
+        System.out.print("Enter a float: ");
+        float floatValue = scanner.nextFloat();
+        System.out.println("Float value: " + floatValue);
+
+        // Input and print String
+        System.out.print("Enter a string: ");
+        scanner.nextLine(); // Consume the newline left by nextFloat()
+        String stringValue = scanner.nextLine();
+        System.out.println("String value: " + stringValue);
+
+        scanner.close();
+    }
+}
