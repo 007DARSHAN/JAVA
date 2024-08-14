@@ -1,0 +1,45 @@
+// Stack.java
+public class Stack<T> {
+    private java.util.LinkedList<T> list = new java.util.LinkedList<>();
+
+    // Push an item onto the stack
+    public void push(T item) {
+        list.addFirst(item);
+    }
+
+    // Pop an item from the stack
+    public T pop() {
+        if (isEmpty()) {
+            throw new java.util.EmptyStackException();
+        }
+        return list.removeFirst();
+    }
+
+    // Peek at the top item of the stack
+    public T peek() {
+        if (isEmpty()) {
+            throw new java.util.EmptyStackException();
+        }
+        return list.getFirst();
+    }
+
+    // Check if the stack is empty
+    public boolean isEmpty() {
+        return list.isEmpty();
+    }
+    
+    // Get the size of the stack
+    public int size() {
+        return list.size();
+    }
+    
+    // Main method to test the stack
+    public static void main(String[] args) {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(10);
+        stack.push(20);
+        System.out.println("Top item: " + stack.peek());
+        System.out.println("Popped item: " + stack.pop());
+        System.out.println("Stack empty: " + stack.isEmpty());
+    }
+}
