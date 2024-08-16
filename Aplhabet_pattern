@@ -1,0 +1,20 @@
+public class AlphabetPattern {
+    public static void main(String[] args) {
+        char startChar = 'a'; // Starting character
+
+        // Loop for each row
+        for (int i = 1; i <= 4; i++) {
+            char currentChar = startChar;
+
+            // Loop to print characters in the current row
+            for (int j = 0; j < i; j++) {
+                System.out.print(currentChar);
+                currentChar++; // Move to the next character
+            }
+            System.out.println(); // Move to the next line after each row
+            
+            // Update startChar to the next character after the last character printed
+            startChar += i;
+        }
+    }
+}
