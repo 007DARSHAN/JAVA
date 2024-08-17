@@ -1,0 +1,26 @@
+public class FunctionsDemo {
+
+    // This is a method that adds two numbers
+    public static int add(int a, int b) {
+        return a + b;
+    }
+
+    // This is a method that subtracts two numbers
+    public static int subtract(int a, int b) {
+        return a - b;
+    }
+
+    // This is the main method which serves as the entry point of the program
+    public static void main(String[] args) {
+        int number1 = 10;
+        int number2 = 5;
+
+        // Calling the add method and storing the result
+        int sum = add(number1, number2);
+        System.out.println("Sum: " + sum);
+
+        // Calling the subtract method and storing the result
+        int difference = subtract(number1, number2);
+        System.out.println("Difference: " + difference);
+    }
+}
