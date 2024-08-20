@@ -1,0 +1,29 @@
+public class CallByReferenceExample {
+
+    static class Person {
+        String name;
+
+        Person(String name) {
+            this.name = name;
+        }
+    }
+
+    public static void modifyPerson(Person person) {
+        person.name = "Alice"; // This modifies the object referred to by 'person'
+    }
+
+    public static void reassignPerson(Person person) {
+        person = new Person("Bob"); // This only changes the local reference 'person'
+    }
+
+    public static void main(String[] args) {
+        Person p = new Person("John");
+        System.out.println("Before modifyPerson: " + p.name);
+
+        modifyPerson(p);
+        System.out.println("After modifyPerson: " + p.name); // The name has been changed
+
+        reassignPerson(p);
+        System.out.println("After reassignPerson: " + p.name); // The name is still "Alice"
+    }
+}
