@@ -1,0 +1,24 @@
+public class Counter {
+    // Static variable
+    static int count = 0;
+
+    // Constructor
+    public Counter() {
+        count++;
+    }
+
+    // Static method to get the value of count
+    public static int getCount() {
+        return count;
+    }
+
+    public static void main(String[] args) {
+        // Creating instances of the Counter class
+        Counter c1 = new Counter();
+        Counter c2 = new Counter();
+        Counter c3 = new Counter();
+
+        // All instances share the same static variable
+        System.out.println("Number of instances: " + Counter.getCount()); // Outputs: 3
+    }
+}
